@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-25",
+  "cargo_external_packages": 0,
+  "cargo_packages": [
+    {
+      "name": "nml01-core",
+      "version": "0.2.0"
+    }
+  ],
+  "python_imports": {
+    "nml01.py": [
+      "argparse",
+      "datetime",
+      "json",
+      "os",
+      "pathlib",
+      "re",
+      "sqlite3",
+      "storage",
+      "subprocess",
+      "sys"
+    ],
+    "storage.py": [
+      "fcntl",
+      "hashlib",
+      "json",
+      "os",
+      "sqlite3",
+      "stat"
+    ],
+    "checks/verify.py": [
+      "argparse",
+      "hashlib",
+      "json",
+      "os",
+      "pathlib",
+      "platform",
+      "select",
+      "signal",
+      "sqlite3",
+      "subprocess",
+      "sys",
+      "tempfile",
+      "time"
+    ]
+  },
+  "own_module": "storage",
+  "bundled_third_party_implementation": false,
+  "runtime_included": false,
+  "rust_toolchain_included": false,
+  "own_license": "Apache-2.0",
+  "copyright": "Copyright 2026 Pavel Grinevich",
+  "license_scope": [
+    "code",
+    "documentation",
+    "synthetic_examples"
+  ],
+  "license_source": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+  "license_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+}

@@ -1,0 +1,4 @@
+{"type": "register", "batch_id": "B-001", "sample_id": "S-001", "indicator": "Q-1", "sampled_at": "2026-10-01T09:00:00Z", "registered_at": "2026-10-01T09:00:00Z", "rule_version": "R-1", "lower": 10, "upper": 20, "wait_minutes": 45, "unit": "mg/L"}
+{"type": "tick", "at": "2026-10-01T09:44:59Z"}
+{"type": "tick", "at": "2026-10-01T09:45:00Z"}
+{"type": "tick", "at": "2026-10-01T09:46:00Z"}

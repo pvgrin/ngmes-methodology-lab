@@ -1,0 +1,8 @@
+/target/
+/bin/
+/nml-demo-state/
+__pycache__/
+*.sqlite
+*.sqlite-*
+*.sqlite.lock
+.DS_Store

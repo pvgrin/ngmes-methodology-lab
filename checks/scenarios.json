@@ -1,0 +1,238 @@
+{
+  "description": "Синтетические контрольные ожидания принятого ограниченного объёма.",
+  "required_fields": [
+    "batch_id",
+    "sample_id",
+    "indicator",
+    "unit",
+    "rule_version",
+    "quality",
+    "quality_reason",
+    "data_status",
+    "review",
+    "next_action",
+    "permission"
+  ],
+  "cases": [
+    {
+      "id": "C01",
+      "phases": [
+        "C01"
+      ],
+      "checkpoints": [
+        {
+          "after_step": 1,
+          "expected": {
+            "permission": "not_issued",
+            "quality": "conforming",
+            "data_status": "received",
+            "overdue": false,
+            "delay_episodes": 0,
+            "review": "not_required",
+            "source": "LAB-1",
+            "revision": 1,
+            "rule_version": "R-1",
+            "event_at": "2026-10-01T09:15:00Z",
+            "received_at": "2026-10-01T09:20:00Z",
+            "next_action": "none"
+          }
+        }
+      ]
+    },
+    {
+      "id": "C01-L",
+      "phases": [
+        "C01-L"
+      ],
+      "checkpoints": [
+        {
+          "after_step": 1,
+          "expected": {
+            "permission": "not_issued",
+            "quality": "conforming",
+            "data_status": "received",
+            "review": "not_required",
+            "rule_version": "R-1"
+          }
+        }
+      ]
+    },
+    {
+      "id": "C01-U",
+      "phases": [
+        "C01-U"
+      ],
+      "checkpoints": [
+        {
+          "after_step": 1,
+          "expected": {
+            "permission": "not_issued",
+            "quality": "conforming",
+            "data_status": "received",
+            "review": "not_required",
+            "rule_version": "R-1"
+          }
+        }
+      ]
+    },
+    {
+      "id": "C02",
+      "phases": [
+        "C02"
+      ],
+      "checkpoints": [
+        {
+          "after_step": 1,
+          "expected": {
+            "permission": "not_issued",
+            "quality": "nonconforming",
+            "review": "open",
+            "logical_exceptions": 1,
+            "next_action": "quality_responsible_review"
+          }
+        },
+        {
+          "after_step": 2,
+          "expected": {
+            "permission": "not_issued",
+            "quality": "nonconforming",
+            "review": "checked",
+            "accepted_decisions": 1,
+            "decision_id": "D-1",
+            "decision_basis_revision": 1
+          }
+        },
+        {
+          "after_step": 3,
+          "expected": {
+            "permission": "not_issued",
+            "quality": "nonconforming",
+            "review": "escalated",
+            "accepted_decisions": 2,
+            "decision_id": "D-2",
+            "history_retains_decision": "D-1",
+            "next_action": "authorized_person_review"
+          }
+        }
+      ]
+    },
+    {
+      "id": "C03",
+      "phases": [
+        "C03"
+      ],
+      "checkpoints": [
+        {
+          "after_step": 1,
+          "expected": {
+            "permission": "not_issued",
+            "quality": "unknown",
+            "data_status": "waiting",
+            "overdue": false,
+            "delay_episodes": 0,
+            "review": "not_required"
+          }
+        },
+        {
+          "after_step": 2,
+          "expected": {
+            "permission": "not_issued",
+            "quality": "unknown",
+            "data_status": "waiting",
+            "overdue": true,
+            "delay_episodes": 1,
+            "review": "open",
+            "logical_exceptions": 1,
+            "next_action": "quality_responsible_request_clarification"
+          }
+        },
+        {
+          "after_step": 3,
+          "expected": {
+            "permission": "not_issued",
+            "quality": "unknown",
+            "overdue": true,
+            "delay_episodes": 1,
+            "logical_exceptions": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "C10",
+      "phases": [
+        "C10"
+      ],
+      "checkpoints": [
+        {
+          "after_step": 2,
+          "expected": {
+            "permission": "not_issued",
+            "report_read_allowed": true,
+            "quality": "nonconforming",
+            "review": "open"
+          }
+        },
+        {
+          "after_step": 3,
+          "expected": {
+            "permission": "not_issued",
+            "quality": "nonconforming",
+            "review": "open",
+            "accepted_decisions": 0,
+            "rejected_decisions": 1,
+            "decision_rejection_reason": "role_not_authorized"
+          }
+        }
+      ]
+    },
+    {
+      "id": "C12",
+      "phases": [
+        "C12-start",
+        "C12-resume"
+      ],
+      "checkpoints": [
+        {
+          "after_step": 3,
+          "expected": {
+            "permission": "not_issued",
+            "quality": "nonconforming",
+            "review": "clarification_requested",
+            "logical_results": 1,
+            "logical_exceptions": 1,
+            "accepted_decisions": 1,
+            "decision_id": "D-1",
+            "stored_revisions": [
+              1
+            ]
+          }
+        },
+        {
+          "after_step": 4,
+          "expected": {
+            "permission": "not_issued",
+            "same_domain_state_as_checkpoint": "C12:3",
+            "quality": "nonconforming",
+            "review": "clarification_requested",
+            "accepted_decisions": 1,
+            "decision_id": "D-1"
+          }
+        },
+        {
+          "after_step": 5,
+          "expected": {
+            "permission": "not_issued",
+            "quality": "nonconforming",
+            "review": "clarification_requested",
+            "logical_results": 1,
+            "deliveries": 2,
+            "logical_exceptions": 1,
+            "accepted_decisions": 1,
+            "decision_id": "D-1"
+          }
+        }
+      ]
+    }
+  ]
+}

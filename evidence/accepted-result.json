@@ -1,0 +1,63 @@
+{
+  "kind": "Историческая сводка принятого артефакта; не проверка новой упаковки",
+  "date": "2026-10-25",
+  "product_version": "0.2.0",
+  "scope": [
+    "C01",
+    "C01-L",
+    "C01-U",
+    "C02",
+    "C03",
+    "C10",
+    "C12"
+  ],
+  "control_checkpoints": 14,
+  "owner_accepted": true,
+  "owner_acceptance_note": "Приёмка представленного результата, без утверждения о личных ручных тестах.",
+  "local_runs": {
+    "runs": 2,
+    "checks_each": 64
+  },
+  "independent_agent_checks": 99,
+  "historical_binary_sha256": "90794ec96b7868d0bb65983aba51841284b21b9bf8995c05553ca1c0f6bfe735",
+  "binary_included": false,
+  "accepted_files_sha256": {
+    "Cargo.toml": "8d64809107c9e1d97667d38f44f05417a03b65291df35182a0f963d9cb0475ad",
+    "Cargo.lock": "b3388779e7e245ad714e676d1bac00813e9e5844ab23468587fdc41909813a22",
+    "src/main.rs": "5cdca8948f2c872b089e673efee931db5423c3e219fa61e7f0372715c5fffe93",
+    "nml01.py": "c10c5a3fab92685e65b8e1395f026f5c7dc0d237979f4dba9c8596d3c1713291",
+    "storage.py": "87664ec077f40f6053dd3c38ab4ac32b5a074ba6902c6d5019a730835b4b6ad9",
+    "inputs/C01.jsonl": "6139c31f3be4a6331607c54a49450667982c2609b12e334e5c2134766130c598",
+    "inputs/C01-L.jsonl": "894f401eed0d351305a0ff26e7affc012f824aae3d3608c502ebea1f46ef1c23",
+    "inputs/C01-U.jsonl": "96530c436272474314b758e3bedd32b5816b1d18c1ffdba1267c65669a39da90",
+    "inputs/C03.jsonl": "01ed74f257bc22d78dfbc7a4762e0c64527f109d68b025dde70c160a8c65a144",
+    "inputs/C02.jsonl": "67a4128d210acbb636a45ed28b8126e17973b749f74b2642233386a6d198d9b8",
+    "inputs/C10.jsonl": "0b68b34a187a89dff07a8044df7f59f12836020d959df4829626b0e1db277b87",
+    "inputs/C12-start.jsonl": "b9bebea340e577c740e3eec612b1e3f9185308dd12d1dccb83822029f4418ea3",
+    "inputs/C12-resume.jsonl": "a5fd701f510228854b173b419d190029437203b068444a82932df07cf563fb54"
+  },
+  "unchanged_accepted_files_sha256": {
+    "Cargo.lock": "b3388779e7e245ad714e676d1bac00813e9e5844ab23468587fdc41909813a22",
+    "src/main.rs": "5cdca8948f2c872b089e673efee931db5423c3e219fa61e7f0372715c5fffe93",
+    "nml01.py": "c10c5a3fab92685e65b8e1395f026f5c7dc0d237979f4dba9c8596d3c1713291",
+    "storage.py": "87664ec077f40f6053dd3c38ab4ac32b5a074ba6902c6d5019a730835b4b6ad9",
+    "inputs/C01.jsonl": "6139c31f3be4a6331607c54a49450667982c2609b12e334e5c2134766130c598",
+    "inputs/C01-L.jsonl": "894f401eed0d351305a0ff26e7affc012f824aae3d3608c502ebea1f46ef1c23",
+    "inputs/C01-U.jsonl": "96530c436272474314b758e3bedd32b5816b1d18c1ffdba1267c65669a39da90",
+    "inputs/C03.jsonl": "01ed74f257bc22d78dfbc7a4762e0c64527f109d68b025dde70c160a8c65a144",
+    "inputs/C02.jsonl": "67a4128d210acbb636a45ed28b8126e17973b749f74b2642233386a6d198d9b8",
+    "inputs/C10.jsonl": "0b68b34a187a89dff07a8044df7f59f12836020d959df4829626b0e1db277b87",
+    "inputs/C12-start.jsonl": "b9bebea340e577c740e3eec612b1e3f9185308dd12d1dccb83822029f4418ea3",
+    "inputs/C12-resume.jsonl": "a5fd701f510228854b173b419d190029437203b068444a82932df07cf563fb54"
+  },
+  "metadata_change": {
+    "file": "Cargo.toml",
+    "public_sha256": "5039196b1e67c18ca1ce1d647762c9b8848199f9e0b37c1398bfdfc6c9d24b1f",
+    "description": "Добавлены Apache-2.0, Pavel Grinevich и утверждённый адрес репозитория; предметный код не менялся."
+  },
+  "historical_evidence_sha256": {
+    "local": "6279d739d319c64250e55e94f537ff71c8b7d14344f773f86c2c24dc104946e9",
+    "independent": "fac5446fe4368c1c171bbe12294db0f2acc1e98c3e58c0de1e74d64330b3bf5f"
+  },
+  "provenance_note": "Полные внутренние журналы не включены; хеши фиксируют происхождение сводки, не дают доступа к журналам."
+}

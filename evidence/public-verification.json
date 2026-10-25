@@ -1,0 +1,802 @@
+{
+  "passed": true,
+  "platform": "Darwin arm64",
+  "python": "3.9.6",
+  "sqlite": "3.51.0",
+  "binary_sha256": "90794ec96b7868d0bb65983aba51841284b21b9bf8995c05553ca1c0f6bfe735",
+  "checks": [
+    {
+      "name": "C01:1",
+      "passed": true
+    },
+    {
+      "name": "history_C01",
+      "passed": true
+    },
+    {
+      "name": "C01-L:1",
+      "passed": true
+    },
+    {
+      "name": "history_C01-L",
+      "passed": true
+    },
+    {
+      "name": "C01-U:1",
+      "passed": true
+    },
+    {
+      "name": "history_C01-U",
+      "passed": true
+    },
+    {
+      "name": "C02:1",
+      "passed": true
+    },
+    {
+      "name": "C02:2",
+      "passed": true
+    },
+    {
+      "name": "C02:3",
+      "passed": true
+    },
+    {
+      "name": "history_C02",
+      "passed": true
+    },
+    {
+      "name": "C03:1",
+      "passed": true
+    },
+    {
+      "name": "C03:2",
+      "passed": true
+    },
+    {
+      "name": "C03:3",
+      "passed": true
+    },
+    {
+      "name": "history_C03",
+      "passed": true
+    },
+    {
+      "name": "C10:2",
+      "passed": true
+    },
+    {
+      "name": "C10:3",
+      "passed": true
+    },
+    {
+      "name": "history_C10",
+      "passed": true
+    },
+    {
+      "name": "C12:3",
+      "passed": true
+    },
+    {
+      "name": "C12:4",
+      "passed": true
+    },
+    {
+      "name": "C12:5",
+      "passed": true
+    },
+    {
+      "name": "history_C12",
+      "passed": true
+    },
+    {
+      "name": "memory_is_not_durable",
+      "passed": true
+    },
+    {
+      "name": "read_at_deadline",
+      "passed": true
+    },
+    {
+      "name": "invalid_malformed_json",
+      "passed": true
+    },
+    {
+      "name": "invalid_empty",
+      "passed": true
+    },
+    {
+      "name": "invalid_duplicate_key",
+      "passed": true
+    },
+    {
+      "name": "invalid_too_large",
+      "passed": true
+    },
+    {
+      "name": "invalid_missing_field",
+      "passed": true
+    },
+    {
+      "name": "invalid_wrong_type",
+      "passed": true
+    },
+    {
+      "name": "invalid_wrong_unit",
+      "passed": true
+    },
+    {
+      "name": "invalid_wrong_identity",
+      "passed": true
+    },
+    {
+      "name": "invalid_bad_timestamp",
+      "passed": true
+    },
+    {
+      "name": "invalid_future_measurement",
+      "passed": true
+    },
+    {
+      "name": "invalid_deadline_tie",
+      "passed": true
+    },
+    {
+      "name": "invalid_extra_field",
+      "passed": true
+    },
+    {
+      "name": "invalid_empty_reason",
+      "passed": true
+    },
+    {
+      "name": "invalid_wrong_revision",
+      "passed": true
+    },
+    {
+      "name": "invalid_wrong_rule",
+      "passed": true
+    },
+    {
+      "name": "invalid_unknown_action",
+      "passed": true
+    },
+    {
+      "name": "invalid_backwards_decision",
+      "passed": true
+    },
+    {
+      "name": "invalid_missing_recipient",
+      "passed": true
+    },
+    {
+      "name": "invalid_decision_without_result",
+      "passed": true
+    },
+    {
+      "name": "invalid_duplicate_decision_id",
+      "passed": true
+    },
+    {
+      "name": "invalid_changed_duplicate",
+      "passed": true
+    },
+    {
+      "name": "mutation_absence",
+      "passed": true
+    },
+    {
+      "name": "mutation_role",
+      "passed": true
+    },
+    {
+      "name": "mutation_duplicate",
+      "passed": true
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "C01",
+      "checkpoints": [
+        {
+          "after_step": 1,
+          "actual": {
+            "batch_id": "B-001",
+            "sample_id": "S-001",
+            "indicator": "Q-1",
+            "unit": "mg/L",
+            "rule_version": "R-1",
+            "quality": "conforming",
+            "quality_reason": "Показатель находится во включённом интервале",
+            "data_status": "received",
+            "review": "not_required",
+            "next_action": "none",
+            "permission": "not_issued",
+            "overdue": false,
+            "delay_episodes": 0,
+            "logical_exceptions": 0,
+            "logical_results": 1,
+            "deliveries": 1,
+            "accepted_decisions": 0,
+            "rejected_decisions": 0,
+            "report_read_allowed": false,
+            "source": "LAB-1",
+            "revision": 1,
+            "value": 15,
+            "event_at": "2026-10-01T09:15:00Z",
+            "received_at": "2026-10-01T09:20:00Z",
+            "stored_revisions": [
+              1
+            ],
+            "event_id": "E-1",
+            "first_received_at": "2026-10-01T09:20:00Z",
+            "storage_seq": 2,
+            "storage_mode": "file",
+            "storage_acknowledged": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "C01-L",
+      "checkpoints": [
+        {
+          "after_step": 1,
+          "actual": {
+            "batch_id": "B-001",
+            "sample_id": "S-001",
+            "indicator": "Q-1",
+            "unit": "mg/L",
+            "rule_version": "R-1",
+            "quality": "conforming",
+            "quality_reason": "Показатель находится во включённом интервале",
+            "data_status": "received",
+            "review": "not_required",
+            "next_action": "none",
+            "permission": "not_issued",
+            "overdue": false,
+            "delay_episodes": 0,
+            "logical_exceptions": 0,
+            "logical_results": 1,
+            "deliveries": 1,
+            "accepted_decisions": 0,
+            "rejected_decisions": 0,
+            "report_read_allowed": false,
+            "source": "LAB-1",
+            "revision": 1,
+            "value": 10,
+            "event_at": "2026-10-01T09:15:00Z",
+            "received_at": "2026-10-01T09:20:00Z",
+            "stored_revisions": [
+              1
+            ],
+            "event_id": "E-1",
+            "first_received_at": "2026-10-01T09:20:00Z",
+            "storage_seq": 2,
+            "storage_mode": "file",
+            "storage_acknowledged": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "C01-U",
+      "checkpoints": [
+        {
+          "after_step": 1,
+          "actual": {
+            "batch_id": "B-001",
+            "sample_id": "S-001",
+            "indicator": "Q-1",
+            "unit": "mg/L",
+            "rule_version": "R-1",
+            "quality": "conforming",
+            "quality_reason": "Показатель находится во включённом интервале",
+            "data_status": "received",
+            "review": "not_required",
+            "next_action": "none",
+            "permission": "not_issued",
+            "overdue": false,
+            "delay_episodes": 0,
+            "logical_exceptions": 0,
+            "logical_results": 1,
+            "deliveries": 1,
+            "accepted_decisions": 0,
+            "rejected_decisions": 0,
+            "report_read_allowed": false,
+            "source": "LAB-1",
+            "revision": 1,
+            "value": 20,
+            "event_at": "2026-10-01T09:15:00Z",
+            "received_at": "2026-10-01T09:20:00Z",
+            "stored_revisions": [
+              1
+            ],
+            "event_id": "E-1",
+            "first_received_at": "2026-10-01T09:20:00Z",
+            "storage_seq": 2,
+            "storage_mode": "file",
+            "storage_acknowledged": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "C02",
+      "checkpoints": [
+        {
+          "after_step": 1,
+          "actual": {
+            "batch_id": "B-001",
+            "sample_id": "S-001",
+            "indicator": "Q-1",
+            "unit": "mg/L",
+            "rule_version": "R-1",
+            "quality": "nonconforming",
+            "quality_reason": "Показатель вне допустимого интервала",
+            "data_status": "received",
+            "review": "open",
+            "next_action": "quality_responsible_review",
+            "permission": "not_issued",
+            "overdue": false,
+            "delay_episodes": 0,
+            "logical_exceptions": 1,
+            "logical_results": 1,
+            "deliveries": 1,
+            "accepted_decisions": 0,
+            "rejected_decisions": 0,
+            "report_read_allowed": false,
+            "source": "LAB-1",
+            "revision": 1,
+            "value": 21,
+            "event_at": "2026-10-01T09:15:00Z",
+            "received_at": "2026-10-01T09:20:00Z",
+            "stored_revisions": [
+              1
+            ],
+            "event_id": "E-1",
+            "first_received_at": "2026-10-01T09:20:00Z",
+            "storage_seq": 2,
+            "storage_mode": "file",
+            "storage_acknowledged": true
+          }
+        },
+        {
+          "after_step": 2,
+          "actual": {
+            "batch_id": "B-001",
+            "sample_id": "S-001",
+            "indicator": "Q-1",
+            "unit": "mg/L",
+            "rule_version": "R-1",
+            "quality": "nonconforming",
+            "quality_reason": "Показатель вне допустимого интервала",
+            "data_status": "received",
+            "review": "checked",
+            "next_action": "none",
+            "permission": "not_issued",
+            "overdue": false,
+            "delay_episodes": 0,
+            "logical_exceptions": 1,
+            "logical_results": 1,
+            "deliveries": 1,
+            "accepted_decisions": 1,
+            "rejected_decisions": 0,
+            "report_read_allowed": false,
+            "source": "LAB-1",
+            "revision": 1,
+            "value": 21,
+            "event_at": "2026-10-01T09:15:00Z",
+            "received_at": "2026-10-01T09:20:00Z",
+            "stored_revisions": [
+              1
+            ],
+            "event_id": "E-1",
+            "first_received_at": "2026-10-01T09:20:00Z",
+            "decision_id": "D-1",
+            "decision_basis_revision": 1,
+            "decision_role": "quality_responsible",
+            "decision_action": "check",
+            "decision_reason": "Синтетическое отклонение проверено; разрешение партии не выдаётся",
+            "decision_at": "2026-10-01T09:25:00Z",
+            "decision_rule_version": "R-1",
+            "decision_recipient": "",
+            "last_decision_accepted": true,
+            "storage_seq": 3,
+            "storage_mode": "file",
+            "storage_acknowledged": true
+          }
+        },
+        {
+          "after_step": 3,
+          "actual": {
+            "batch_id": "B-001",
+            "sample_id": "S-001",
+            "indicator": "Q-1",
+            "unit": "mg/L",
+            "rule_version": "R-1",
+            "quality": "nonconforming",
+            "quality_reason": "Показатель вне допустимого интервала",
+            "data_status": "received",
+            "review": "escalated",
+            "next_action": "authorized_person_review",
+            "permission": "not_issued",
+            "overdue": false,
+            "delay_episodes": 0,
+            "logical_exceptions": 1,
+            "logical_results": 1,
+            "deliveries": 1,
+            "accepted_decisions": 2,
+            "rejected_decisions": 0,
+            "report_read_allowed": false,
+            "source": "LAB-1",
+            "revision": 1,
+            "value": 21,
+            "event_at": "2026-10-01T09:15:00Z",
+            "received_at": "2026-10-01T09:20:00Z",
+            "stored_revisions": [
+              1
+            ],
+            "event_id": "E-1",
+            "first_received_at": "2026-10-01T09:20:00Z",
+            "decision_id": "D-2",
+            "decision_basis_revision": 1,
+            "decision_role": "quality_responsible",
+            "decision_action": "escalate",
+            "decision_reason": "Отклонение требует рассмотрения уполномоченным",
+            "decision_at": "2026-10-01T09:26:00Z",
+            "decision_rule_version": "R-1",
+            "decision_recipient": "authorized_person",
+            "history_retains_decision": "D-1",
+            "last_decision_accepted": true,
+            "storage_seq": 4,
+            "storage_mode": "file",
+            "storage_acknowledged": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "C03",
+      "checkpoints": [
+        {
+          "after_step": 1,
+          "actual": {
+            "batch_id": "B-001",
+            "sample_id": "S-001",
+            "indicator": "Q-1",
+            "unit": "mg/L",
+            "rule_version": "R-1",
+            "quality": "unknown",
+            "quality_reason": "Пригодный результат отсутствует",
+            "data_status": "waiting",
+            "review": "not_required",
+            "next_action": "none",
+            "permission": "not_issued",
+            "overdue": false,
+            "delay_episodes": 0,
+            "logical_exceptions": 0,
+            "logical_results": 0,
+            "deliveries": 0,
+            "accepted_decisions": 0,
+            "rejected_decisions": 0,
+            "report_read_allowed": false,
+            "storage_seq": 2,
+            "storage_mode": "file",
+            "storage_acknowledged": true
+          }
+        },
+        {
+          "after_step": 2,
+          "actual": {
+            "batch_id": "B-001",
+            "sample_id": "S-001",
+            "indicator": "Q-1",
+            "unit": "mg/L",
+            "rule_version": "R-1",
+            "quality": "unknown",
+            "quality_reason": "Пригодный результат отсутствует",
+            "data_status": "waiting",
+            "review": "open",
+            "next_action": "quality_responsible_request_clarification",
+            "permission": "not_issued",
+            "overdue": true,
+            "delay_episodes": 1,
+            "logical_exceptions": 1,
+            "logical_results": 0,
+            "deliveries": 0,
+            "accepted_decisions": 0,
+            "rejected_decisions": 0,
+            "report_read_allowed": false,
+            "storage_seq": 3,
+            "storage_mode": "file",
+            "storage_acknowledged": true
+          }
+        },
+        {
+          "after_step": 3,
+          "actual": {
+            "batch_id": "B-001",
+            "sample_id": "S-001",
+            "indicator": "Q-1",
+            "unit": "mg/L",
+            "rule_version": "R-1",
+            "quality": "unknown",
+            "quality_reason": "Пригодный результат отсутствует",
+            "data_status": "waiting",
+            "review": "open",
+            "next_action": "quality_responsible_request_clarification",
+            "permission": "not_issued",
+            "overdue": true,
+            "delay_episodes": 1,
+            "logical_exceptions": 1,
+            "logical_results": 0,
+            "deliveries": 0,
+            "accepted_decisions": 0,
+            "rejected_decisions": 0,
+            "report_read_allowed": false,
+            "storage_seq": 4,
+            "storage_mode": "file",
+            "storage_acknowledged": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "C10",
+      "checkpoints": [
+        {
+          "after_step": 2,
+          "actual": {
+            "batch_id": "B-001",
+            "sample_id": "S-001",
+            "indicator": "Q-1",
+            "unit": "mg/L",
+            "rule_version": "R-1",
+            "quality": "nonconforming",
+            "quality_reason": "Показатель вне допустимого интервала",
+            "data_status": "received",
+            "review": "open",
+            "next_action": "quality_responsible_review",
+            "permission": "not_issued",
+            "overdue": false,
+            "delay_episodes": 0,
+            "logical_exceptions": 1,
+            "logical_results": 1,
+            "deliveries": 1,
+            "accepted_decisions": 0,
+            "rejected_decisions": 0,
+            "report_read_allowed": true,
+            "source": "LAB-1",
+            "revision": 1,
+            "value": 21,
+            "event_at": "2026-10-01T09:15:00Z",
+            "received_at": "2026-10-01T09:20:00Z",
+            "stored_revisions": [
+              1
+            ],
+            "event_id": "E-1",
+            "first_received_at": "2026-10-01T09:20:00Z",
+            "storage_seq": 3,
+            "storage_mode": "file",
+            "storage_acknowledged": true
+          }
+        },
+        {
+          "after_step": 3,
+          "actual": {
+            "batch_id": "B-001",
+            "sample_id": "S-001",
+            "indicator": "Q-1",
+            "unit": "mg/L",
+            "rule_version": "R-1",
+            "quality": "nonconforming",
+            "quality_reason": "Показатель вне допустимого интервала",
+            "data_status": "received",
+            "review": "open",
+            "next_action": "quality_responsible_review",
+            "permission": "not_issued",
+            "overdue": false,
+            "delay_episodes": 0,
+            "logical_exceptions": 1,
+            "logical_results": 1,
+            "deliveries": 1,
+            "accepted_decisions": 0,
+            "rejected_decisions": 1,
+            "report_read_allowed": false,
+            "source": "LAB-1",
+            "revision": 1,
+            "value": 21,
+            "event_at": "2026-10-01T09:15:00Z",
+            "received_at": "2026-10-01T09:20:00Z",
+            "stored_revisions": [
+              1
+            ],
+            "event_id": "E-1",
+            "first_received_at": "2026-10-01T09:20:00Z",
+            "rejected_decision_id": "D-1",
+            "decision_rejection_reason": "role_not_authorized",
+            "last_decision_accepted": false,
+            "storage_seq": 4,
+            "storage_mode": "file",
+            "storage_acknowledged": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "C12",
+      "checkpoints": [
+        {
+          "after_step": 3,
+          "actual": {
+            "batch_id": "B-001",
+            "sample_id": "S-001",
+            "indicator": "Q-1",
+            "unit": "mg/L",
+            "rule_version": "R-1",
+            "quality": "nonconforming",
+            "quality_reason": "Показатель вне допустимого интервала",
+            "data_status": "received",
+            "review": "clarification_requested",
+            "next_action": "await_clarification",
+            "permission": "not_issued",
+            "overdue": false,
+            "delay_episodes": 0,
+            "logical_exceptions": 1,
+            "logical_results": 1,
+            "deliveries": 1,
+            "accepted_decisions": 1,
+            "rejected_decisions": 0,
+            "report_read_allowed": false,
+            "source": "LAB-1",
+            "revision": 1,
+            "value": 21,
+            "event_at": "2026-10-01T09:15:00Z",
+            "received_at": "2026-10-01T09:20:00Z",
+            "stored_revisions": [
+              1
+            ],
+            "event_id": "E-1",
+            "first_received_at": "2026-10-01T09:20:00Z",
+            "decision_id": "D-1",
+            "decision_basis_revision": 1,
+            "decision_role": "quality_responsible",
+            "decision_action": "request_clarification",
+            "decision_reason": "Уточнить отклонение",
+            "decision_at": "2026-10-01T09:25:00Z",
+            "decision_rule_version": "R-1",
+            "decision_recipient": "",
+            "last_decision_accepted": true,
+            "storage_seq": 3,
+            "storage_mode": "file",
+            "storage_acknowledged": true
+          }
+        },
+        {
+          "after_step": 4,
+          "actual": {
+            "batch_id": "B-001",
+            "sample_id": "S-001",
+            "indicator": "Q-1",
+            "unit": "mg/L",
+            "rule_version": "R-1",
+            "quality": "nonconforming",
+            "quality_reason": "Показатель вне допустимого интервала",
+            "data_status": "received",
+            "review": "clarification_requested",
+            "next_action": "await_clarification",
+            "permission": "not_issued",
+            "overdue": false,
+            "delay_episodes": 0,
+            "logical_exceptions": 1,
+            "logical_results": 1,
+            "deliveries": 1,
+            "accepted_decisions": 1,
+            "rejected_decisions": 0,
+            "report_read_allowed": false,
+            "source": "LAB-1",
+            "revision": 1,
+            "value": 21,
+            "event_at": "2026-10-01T09:15:00Z",
+            "received_at": "2026-10-01T09:20:00Z",
+            "stored_revisions": [
+              1
+            ],
+            "event_id": "E-1",
+            "first_received_at": "2026-10-01T09:20:00Z",
+            "decision_id": "D-1",
+            "decision_basis_revision": 1,
+            "decision_role": "quality_responsible",
+            "decision_action": "request_clarification",
+            "decision_reason": "Уточнить отклонение",
+            "decision_at": "2026-10-01T09:25:00Z",
+            "decision_rule_version": "R-1",
+            "decision_recipient": "",
+            "last_decision_accepted": true,
+            "storage_seq": 3,
+            "storage_mode": "file",
+            "storage_acknowledged": true
+          }
+        },
+        {
+          "after_step": 5,
+          "actual": {
+            "batch_id": "B-001",
+            "sample_id": "S-001",
+            "indicator": "Q-1",
+            "unit": "mg/L",
+            "rule_version": "R-1",
+            "quality": "nonconforming",
+            "quality_reason": "Показатель вне допустимого интервала",
+            "data_status": "received",
+            "review": "clarification_requested",
+            "next_action": "await_clarification",
+            "permission": "not_issued",
+            "overdue": false,
+            "delay_episodes": 0,
+            "logical_exceptions": 1,
+            "logical_results": 1,
+            "deliveries": 2,
+            "accepted_decisions": 1,
+            "rejected_decisions": 0,
+            "report_read_allowed": false,
+            "source": "LAB-1",
+            "revision": 1,
+            "value": 21,
+            "event_at": "2026-10-01T09:15:00Z",
+            "received_at": "2026-10-01T09:20:00Z",
+            "stored_revisions": [
+              1
+            ],
+            "event_id": "E-1",
+            "first_received_at": "2026-10-01T09:20:00Z",
+            "decision_id": "D-1",
+            "decision_basis_revision": 1,
+            "decision_role": "quality_responsible",
+            "decision_action": "request_clarification",
+            "decision_reason": "Уточнить отклонение",
+            "decision_at": "2026-10-01T09:25:00Z",
+            "decision_rule_version": "R-1",
+            "decision_recipient": "",
+            "last_decision_accepted": true,
+            "storage_seq": 4,
+            "storage_mode": "file",
+            "storage_acknowledged": true
+          }
+        }
+      ]
+    }
+  ],
+  "control_checkpoints": 14,
+  "check_count": 47,
+  "temporary_environment_removed": true,
+  "verification_context": "Тот же самостоятельный проверяющий; внешняя песочница запрещала сеть и доступ к внутренним файлам. Обычный запуск не создаёт песочницу.",
+  "source_files_sha256": {
+    "Cargo.toml": "5039196b1e67c18ca1ce1d647762c9b8848199f9e0b37c1398bfdfc6c9d24b1f",
+    "Cargo.lock": "b3388779e7e245ad714e676d1bac00813e9e5844ab23468587fdc41909813a22",
+    "src/main.rs": "5cdca8948f2c872b089e673efee931db5423c3e219fa61e7f0372715c5fffe93",
+    "nml01.py": "c10c5a3fab92685e65b8e1395f026f5c7dc0d237979f4dba9c8596d3c1713291",
+    "storage.py": "87664ec077f40f6053dd3c38ab4ac32b5a074ba6902c6d5019a730835b4b6ad9",
+    "inputs/C01.jsonl": "6139c31f3be4a6331607c54a49450667982c2609b12e334e5c2134766130c598",
+    "inputs/C01-L.jsonl": "894f401eed0d351305a0ff26e7affc012f824aae3d3608c502ebea1f46ef1c23",
+    "inputs/C01-U.jsonl": "96530c436272474314b758e3bedd32b5816b1d18c1ffdba1267c65669a39da90",
+    "inputs/C03.jsonl": "01ed74f257bc22d78dfbc7a4762e0c64527f109d68b025dde70c160a8c65a144",
+    "inputs/C02.jsonl": "67a4128d210acbb636a45ed28b8126e17973b749f74b2642233386a6d198d9b8",
+    "inputs/C10.jsonl": "0b68b34a187a89dff07a8044df7f59f12836020d959df4829626b0e1db277b87",
+    "inputs/C12-start.jsonl": "b9bebea340e577c740e3eec612b1e3f9185308dd12d1dccb83822029f4418ea3",
+    "inputs/C12-resume.jsonl": "a5fd701f510228854b173b419d190029437203b068444a82932df07cf563fb54"
+  },
+  "checker_sha256": "992b449adfefb3c355be4721980bf72733660c8db9defd4c395fa1abf0a90ec4",
+  "expectations_sha256": "e9f96e5befd20a8f8da4e1fa08719db5abb6298473033aa0a6e2f026dc2331b5",
+  "cargo_external_dependencies": 0,
+  "offline_build": true,
+  "historical_binary_match": true,
+  "reproduction": {
+    "clean_builds": 2,
+    "binary_sha256": "90794ec96b7868d0bb65983aba51841284b21b9bf8995c05553ca1c0f6bfe735",
+    "checks_each": 47,
+    "control_checkpoints_each": 14
+  },
+  "license": "Apache-2.0"
+}

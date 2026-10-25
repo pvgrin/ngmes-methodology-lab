@@ -1,0 +1,2 @@
+{"type": "status"}
+{"event_id": "E-1", "source": "LAB-1", "batch_id": "B-001", "sample_id": "S-001", "indicator": "Q-1", "revision": 1, "event_at": "2026-10-01T09:15:00Z", "unit": "mg/L", "type": "result", "value": 21, "received_at": "2026-10-01T09:27:00Z"}
