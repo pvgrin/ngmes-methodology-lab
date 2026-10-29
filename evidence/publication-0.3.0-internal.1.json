@@ -1,0 +1,18 @@
+{
+  "product_version": "0.3.0-internal.1",
+  "owner_acceptance_date": "2026-10-29",
+  "publication_date": "2026-10-29",
+  "publication_performed": true,
+  "repository": "https://github.com/pvgrin/ngmes-methodology-lab",
+  "source_commit": "9491923837f9711626869bdf02e935bf885eaa6e",
+  "source_tree": "beddbbff4f2d614337431b21b848f386f1d535fd",
+  "parent": "375bda27b481145a9a3a6de71f62a4ed66de547f",
+  "source_files": 42,
+  "source_manifest_sha256": "a0ea57556063a76b195a93db61a8361649b38521023591b43fdc58573d52bdc7",
+  "anonymous_verification": {
+    "passed": true,
+    "files_equal": 42,
+    "verified_at_utc": "2026-10-29T15:12:02.241744+00:00"
+  },
+  "note": "Квитанция добавлена следующим документационным коммитом; исходники, входы и проверки опубликованной версии не меняются. Текущий манифест включает также эту квитанцию."
+}
