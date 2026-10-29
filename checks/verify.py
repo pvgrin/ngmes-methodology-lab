@@ -154,6 +154,10 @@ def checkpoint(outputs, point):
     relation = wanted.pop("same_domain_state_as_checkpoint", None)
     actual = outputs[point["after_step"]]
     matches(actual, wanted)
+    for field in point.get("absent", []):
+        require(field not in actual, "Лишнее поле: " + field)
+    if "same_as_step" in point:
+        require(actual == outputs[point["same_as_step"]], "Состояние не восстановлено")
     if relation:
         require(
             relation == "C12:3" and actual == outputs[3],
@@ -198,6 +202,10 @@ def negatives(root):
         dump(c02[:2] + [normal | {"received_at": "2026-10-01T09:21:00Z"}]),
         2,
     )
+    definitions = json.loads((root / "checks/scenarios.json").read_text())
+    for case in definitions.get("negative_cases", []):
+        require(case["id"] not in result, "Повтор отказного случая")
+        result[case["id"]] = (dump(case["records"]), case["allowed_reports"])
     return result
 
 
@@ -363,6 +371,12 @@ def run_suite(root, binary, program=None, execute=invoke, temporary_parent=None)
             ("absence", "C03", 2, {"quality": "conforming"}),
             ("role", "C10", 3, {"accepted_decisions": 1}),
             ("duplicate", "C12", 5, {"logical_results": 2}),
+            ("late_delay", "C04", 2, {"delay_episodes": 0}),
+            ("late_status", "C04", 2, {"data_status": "received"}),
+            ("late_role", "C04-FLOW", 4, {"accepted_decisions": 1}),
+            ("late_restart", "C04-FLOW", 6, {"decision_id": "LOST"}),
+            ("late_first_receipt", "C04-FLOW", 7, {"waiting_closed_at": "2026-10-01T09:55:00Z"}),
+            ("timely_repeat", "C04-TIMELY-REPEAT", 3, {"data_status": "late_received"}),
         ):
             changed = [dict(s) for s in observed[case_id]]
             changed[index].update(change)

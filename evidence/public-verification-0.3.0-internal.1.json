@@ -1,0 +1,349 @@
+{
+  "date": "2026-10-29",
+  "product_version": "0.3.0-internal.1",
+  "passed": true,
+  "kind": "Свежая проверка исходников и публичного проверяющего перед разрешённой публикацией",
+  "platform": "Darwin arm64",
+  "python": "3.9.6",
+  "sqlite": "3.51.0",
+  "reproduction": {
+    "clean_builds": 2,
+    "checks_each": 76,
+    "control_checkpoints_each": 25,
+    "scenarios_each": 11,
+    "binary_sha256": "15b5500e25bf9f95e1e0fb0becd71fdb5d41df3c1e3b7dc34fbb0f546ed04c48",
+    "matches_accepted_binary": true
+  },
+  "tested_files_sha256": {
+    "Cargo.toml": "40a64c472038cbd6321f4745f5c50ceccb7cae2be3690000c356dc7c22a4fa40",
+    "Cargo.lock": "bc88ea68ea97090d40afc9230f97c3c45592ef84987667fbc13f555bd94153dd",
+    "src/main.rs": "a287b7fe8f5493f0d404c5636747bbcf787a9d0a18a83978476fe09eda6200cb",
+    "nml01.py": "c10c5a3fab92685e65b8e1395f026f5c7dc0d237979f4dba9c8596d3c1713291",
+    "storage.py": "87664ec077f40f6053dd3c38ab4ac32b5a074ba6902c6d5019a730835b4b6ad9",
+    "inputs/C01-L.jsonl": "894f401eed0d351305a0ff26e7affc012f824aae3d3608c502ebea1f46ef1c23",
+    "inputs/C01-U.jsonl": "96530c436272474314b758e3bedd32b5816b1d18c1ffdba1267c65669a39da90",
+    "inputs/C01.jsonl": "6139c31f3be4a6331607c54a49450667982c2609b12e334e5c2134766130c598",
+    "inputs/C02.jsonl": "67a4128d210acbb636a45ed28b8126e17973b749f74b2642233386a6d198d9b8",
+    "inputs/C03.jsonl": "01ed74f257bc22d78dfbc7a4762e0c64527f109d68b025dde70c160a8c65a144",
+    "inputs/C04-DIRECT.jsonl": "cbcfff102238f3e25fb160c4c88506fdde308454ce5955338dd680406519ac42",
+    "inputs/C04-FLOW-resume.jsonl": "5ac88195e88d74677dab1c8320ff251ea168299d92d84672bcb38f41daaa8c20",
+    "inputs/C04-FLOW-start.jsonl": "121caf3ecf7abcdb03720ea30b66620cedcaa149f07e51a943aafdc5c915bab5",
+    "inputs/C04-TIMELY-REPEAT.jsonl": "4e231463ac02de0f3d740b325d1e25c246a866c4af5ca59ef27a290521501cb4",
+    "inputs/C04.jsonl": "021dfefa74c9092f6ee7cdadbef99a8cf18d2a55e3277e16575cda9f2315753f",
+    "inputs/C10.jsonl": "0b68b34a187a89dff07a8044df7f59f12836020d959df4829626b0e1db277b87",
+    "inputs/C12-resume.jsonl": "a5fd701f510228854b173b419d190029437203b068444a82932df07cf563fb54",
+    "inputs/C12-start.jsonl": "b9bebea340e577c740e3eec612b1e3f9185308dd12d1dccb83822029f4418ea3",
+    "checks/verify.py": "b84da59a9c6fee7ce913771f923699d2e810e03cea0cfb01c2e9facbc714b8f7",
+    "checks/scenarios.json": "6ff32e8236e5e9b9392a1547ab942a95c1bd735717e3d556f3e430f23c5d6418"
+  },
+  "checks": [
+    {
+      "name": "C01:1",
+      "passed": true
+    },
+    {
+      "name": "history_C01",
+      "passed": true
+    },
+    {
+      "name": "C01-L:1",
+      "passed": true
+    },
+    {
+      "name": "history_C01-L",
+      "passed": true
+    },
+    {
+      "name": "C01-U:1",
+      "passed": true
+    },
+    {
+      "name": "history_C01-U",
+      "passed": true
+    },
+    {
+      "name": "C02:1",
+      "passed": true
+    },
+    {
+      "name": "C02:2",
+      "passed": true
+    },
+    {
+      "name": "C02:3",
+      "passed": true
+    },
+    {
+      "name": "history_C02",
+      "passed": true
+    },
+    {
+      "name": "C03:1",
+      "passed": true
+    },
+    {
+      "name": "C03:2",
+      "passed": true
+    },
+    {
+      "name": "C03:3",
+      "passed": true
+    },
+    {
+      "name": "history_C03",
+      "passed": true
+    },
+    {
+      "name": "C10:2",
+      "passed": true
+    },
+    {
+      "name": "C10:3",
+      "passed": true
+    },
+    {
+      "name": "history_C10",
+      "passed": true
+    },
+    {
+      "name": "C12:3",
+      "passed": true
+    },
+    {
+      "name": "C12:4",
+      "passed": true
+    },
+    {
+      "name": "C12:5",
+      "passed": true
+    },
+    {
+      "name": "history_C12",
+      "passed": true
+    },
+    {
+      "name": "C04:1",
+      "passed": true
+    },
+    {
+      "name": "C04:2",
+      "passed": true
+    },
+    {
+      "name": "history_C04",
+      "passed": true
+    },
+    {
+      "name": "C04-FLOW:3",
+      "passed": true
+    },
+    {
+      "name": "C04-FLOW:4",
+      "passed": true
+    },
+    {
+      "name": "C04-FLOW:5",
+      "passed": true
+    },
+    {
+      "name": "C04-FLOW:6",
+      "passed": true
+    },
+    {
+      "name": "C04-FLOW:7",
+      "passed": true
+    },
+    {
+      "name": "history_C04-FLOW",
+      "passed": true
+    },
+    {
+      "name": "C04-DIRECT:1",
+      "passed": true
+    },
+    {
+      "name": "C04-DIRECT:2",
+      "passed": true
+    },
+    {
+      "name": "history_C04-DIRECT",
+      "passed": true
+    },
+    {
+      "name": "C04-TIMELY-REPEAT:2",
+      "passed": true
+    },
+    {
+      "name": "C04-TIMELY-REPEAT:3",
+      "passed": true
+    },
+    {
+      "name": "history_C04-TIMELY-REPEAT",
+      "passed": true
+    },
+    {
+      "name": "memory_is_not_durable",
+      "passed": true
+    },
+    {
+      "name": "read_at_deadline",
+      "passed": true
+    },
+    {
+      "name": "invalid_malformed_json",
+      "passed": true
+    },
+    {
+      "name": "invalid_empty",
+      "passed": true
+    },
+    {
+      "name": "invalid_duplicate_key",
+      "passed": true
+    },
+    {
+      "name": "invalid_too_large",
+      "passed": true
+    },
+    {
+      "name": "invalid_missing_field",
+      "passed": true
+    },
+    {
+      "name": "invalid_wrong_type",
+      "passed": true
+    },
+    {
+      "name": "invalid_wrong_unit",
+      "passed": true
+    },
+    {
+      "name": "invalid_wrong_identity",
+      "passed": true
+    },
+    {
+      "name": "invalid_bad_timestamp",
+      "passed": true
+    },
+    {
+      "name": "invalid_future_measurement",
+      "passed": true
+    },
+    {
+      "name": "invalid_deadline_tie",
+      "passed": true
+    },
+    {
+      "name": "invalid_extra_field",
+      "passed": true
+    },
+    {
+      "name": "invalid_empty_reason",
+      "passed": true
+    },
+    {
+      "name": "invalid_wrong_revision",
+      "passed": true
+    },
+    {
+      "name": "invalid_wrong_rule",
+      "passed": true
+    },
+    {
+      "name": "invalid_unknown_action",
+      "passed": true
+    },
+    {
+      "name": "invalid_backwards_decision",
+      "passed": true
+    },
+    {
+      "name": "invalid_missing_recipient",
+      "passed": true
+    },
+    {
+      "name": "invalid_decision_without_result",
+      "passed": true
+    },
+    {
+      "name": "invalid_duplicate_decision_id",
+      "passed": true
+    },
+    {
+      "name": "invalid_changed_duplicate",
+      "passed": true
+    },
+    {
+      "name": "invalid_timely_normal_check",
+      "passed": true
+    },
+    {
+      "name": "invalid_late_wrong_rule",
+      "passed": true
+    },
+    {
+      "name": "invalid_late_wrong_revision",
+      "passed": true
+    },
+    {
+      "name": "invalid_late_empty_reason",
+      "passed": true
+    },
+    {
+      "name": "invalid_late_backwards_decision",
+      "passed": true
+    },
+    {
+      "name": "invalid_late_normal_clarification",
+      "passed": true
+    },
+    {
+      "name": "invalid_late_normal_escalation",
+      "passed": true
+    },
+    {
+      "name": "invalid_late_conflicting_duplicate",
+      "passed": true
+    },
+    {
+      "name": "mutation_absence",
+      "passed": true
+    },
+    {
+      "name": "mutation_role",
+      "passed": true
+    },
+    {
+      "name": "mutation_duplicate",
+      "passed": true
+    },
+    {
+      "name": "mutation_late_delay",
+      "passed": true
+    },
+    {
+      "name": "mutation_late_status",
+      "passed": true
+    },
+    {
+      "name": "mutation_late_role",
+      "passed": true
+    },
+    {
+      "name": "mutation_late_restart",
+      "passed": true
+    },
+    {
+      "name": "mutation_late_first_receipt",
+      "passed": true
+    },
+    {
+      "name": "mutation_timely_repeat",
+      "passed": true
+    }
+  ],
+  "isolation": "Кандидат собирался и запускался в прежней macOS sandbox-exec; сеть запрещена, чтение ожиданий и Git управления проверено отказом. Публичный проверяющий сам песочницу не создаёт.",
+  "license": "Apache-2.0",
+  "binary_included": false,
+  "limits": "Синтетические сценарии; перезапуск после подтверждения записи, без испытания отключения питания. Приёмка владельца записана отдельно; число проверок не равно числу уникальных требований."
+}

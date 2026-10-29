@@ -1,10 +1,10 @@
 {
-  "date": "2026-10-25",
+  "date": "2026-10-29",
   "cargo_external_packages": 0,
   "cargo_packages": [
     {
       "name": "nml01-core",
-      "version": "0.2.0"
+      "version": "0.3.0-internal.1"
     }
   ],
   "python_imports": {

@@ -1,0 +1,59 @@
+{
+  "kind": "Принятая версия; историческая техническая проверка до публичной упаковки",
+  "product_version": "0.3.0-internal.1",
+  "technical_result_date": "2026-10-25",
+  "owner_acceptance_date": "2026-10-29",
+  "owner_accepted": true,
+  "publication_authorized": true,
+  "owner_manual_tests_claimed": false,
+  "scope": [
+    "C01",
+    "C01-L",
+    "C01-U",
+    "C02",
+    "C03",
+    "C10",
+    "C12",
+    "C04",
+    "C04-FLOW",
+    "C04-DIRECT",
+    "C04-TIMELY-REPEAT"
+  ],
+  "control_checkpoints": 25,
+  "new_checkpoints": 11,
+  "previous_checkpoints": 14,
+  "nml01_complete": false,
+  "accepted_files_sha256": {
+    "Cargo.toml": "40a64c472038cbd6321f4745f5c50ceccb7cae2be3690000c356dc7c22a4fa40",
+    "Cargo.lock": "bc88ea68ea97090d40afc9230f97c3c45592ef84987667fbc13f555bd94153dd",
+    "src/main.rs": "a287b7fe8f5493f0d404c5636747bbcf787a9d0a18a83978476fe09eda6200cb",
+    "nml01.py": "c10c5a3fab92685e65b8e1395f026f5c7dc0d237979f4dba9c8596d3c1713291",
+    "storage.py": "87664ec077f40f6053dd3c38ab4ac32b5a074ba6902c6d5019a730835b4b6ad9",
+    "inputs/C01-L.jsonl": "894f401eed0d351305a0ff26e7affc012f824aae3d3608c502ebea1f46ef1c23",
+    "inputs/C01-U.jsonl": "96530c436272474314b758e3bedd32b5816b1d18c1ffdba1267c65669a39da90",
+    "inputs/C01.jsonl": "6139c31f3be4a6331607c54a49450667982c2609b12e334e5c2134766130c598",
+    "inputs/C02.jsonl": "67a4128d210acbb636a45ed28b8126e17973b749f74b2642233386a6d198d9b8",
+    "inputs/C03.jsonl": "01ed74f257bc22d78dfbc7a4762e0c64527f109d68b025dde70c160a8c65a144",
+    "inputs/C04-DIRECT.jsonl": "cbcfff102238f3e25fb160c4c88506fdde308454ce5955338dd680406519ac42",
+    "inputs/C04-FLOW-resume.jsonl": "5ac88195e88d74677dab1c8320ff251ea168299d92d84672bcb38f41daaa8c20",
+    "inputs/C04-FLOW-start.jsonl": "121caf3ecf7abcdb03720ea30b66620cedcaa149f07e51a943aafdc5c915bab5",
+    "inputs/C04-TIMELY-REPEAT.jsonl": "4e231463ac02de0f3d740b325d1e25c246a866c4af5ca59ef27a290521501cb4",
+    "inputs/C04.jsonl": "021dfefa74c9092f6ee7cdadbef99a8cf18d2a55e3277e16575cda9f2315753f",
+    "inputs/C10.jsonl": "0b68b34a187a89dff07a8044df7f59f12836020d959df4829626b0e1db277b87",
+    "inputs/C12-resume.jsonl": "a5fd701f510228854b173b419d190029437203b068444a82932df07cf563fb54",
+    "inputs/C12-start.jsonl": "b9bebea340e577c740e3eec612b1e3f9185308dd12d1dccb83822029f4418ea3"
+  },
+  "accepted_binary_sha256": "15b5500e25bf9f95e1e0fb0becd71fdb5d41df3c1e3b7dc34fbb0f546ed04c48",
+  "binary_included": false,
+  "local_runs": {
+    "runs": 2,
+    "checks_each": 94,
+    "verifier_tests": 26
+  },
+  "independent_checks": {
+    "regression": 106,
+    "late_flow": 67
+  },
+  "historical_qualification_sha256": "8d40d167d1a2df2f9bd141e19d82a36131005214052208bb3d58b6af5b830d9e",
+  "note": "Сводка без внутренних журналов; код, метаданные Cargo и входы сохранены побайтово. Приёмка не означает личного исполнения испытаний владельцем."
+}

@@ -1,4 +1,4 @@
-//! Ограниченные два шага NML-01. JSON и SQLite обслуживает отдельный адаптер.
+//! Третий внутренний шаг NML-01. JSON и SQLite обслуживает отдельный адаптер.
 use std::io::{self, BufRead, Read, Write};
 
 #[derive(Debug)]
@@ -9,6 +9,7 @@ struct ResultData {
     value: i64,
     event_at: String,
     received_at: String,
+    late: bool,
 }
 
 struct Decision {
@@ -171,9 +172,11 @@ impl State {
                     self.read_allowed = false;
                     return Ok(());
                 }
-                if received >= self.deadline {
-                    return Err("Первый результат на/после срока пока не поддерживается".into());
+                if received == self.deadline {
+                    return Err("Первый результат ровно на сроке пока не поддерживается".into());
                 }
+                let late = received > self.deadline;
+                self.delayed |= late;
                 self.now = received;
                 self.result = Some(ResultData {
                     id,
@@ -182,6 +185,7 @@ impl State {
                     value,
                     event_at,
                     received_at,
+                    late,
                 });
                 self.deliveries = 1;
                 self.read_allowed = false;
@@ -217,7 +221,8 @@ impl State {
                 if at < self.now
                     || p[5] != self.rule
                     || revision != result.revision
-                    || (self.lower..=self.upper).contains(&result.value)
+                    || ((self.lower..=self.upper).contains(&result.value)
+                        && !(result.late && action == "check"))
                     || !["check", "request_clarification", "escalate"].contains(&action.as_str())
                     || (action == "escalate") == recipient.is_empty()
                 {
@@ -254,7 +259,7 @@ impl State {
         let question = self.delayed || quality == "nonconforming";
         let mut action = if overdue {
             "quality_responsible_request_clarification"
-        } else if quality == "nonconforming" {
+        } else if question {
             "quality_responsible_review"
         } else {
             "none"
@@ -279,10 +284,10 @@ impl State {
             self.rule,
             quality,
             reason,
-            if self.result.is_some() {
-                "received"
-            } else {
-                "waiting"
+            match &self.result {
+                Some(r) if r.late => "late_received",
+                Some(_) => "received",
+                None => "waiting",
             },
             review,
             action,
@@ -293,6 +298,12 @@ impl State {
         text.push_str(&format!(r#", "logical_results":{},"deliveries":{},"accepted_decisions":{},"rejected_decisions":{},"report_read_allowed":{}"#,
             u8::from(self.result.is_some()),self.deliveries,accepted.len(),rejected.len(),self.read_allowed));
         if let Some(r) = &self.result {
+            if r.late {
+                text.push_str(&format!(
+                    r#", "waiting_closed_at":{}"#,
+                    json_text(&r.received_at)
+                ));
+            }
             text.push_str(&format!(
                 r#", "source":"{}","revision":{},"value":{},"event_at":"{}","received_at":"{}""#,
                 r.source, r.revision, r.value, r.event_at, r.received_at

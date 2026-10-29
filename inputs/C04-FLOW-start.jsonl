@@ -1,0 +1,6 @@
+{"type": "register", "batch_id": "B-001", "sample_id": "S-001", "indicator": "Q-1", "sampled_at": "2026-10-01T09:00:00Z", "registered_at": "2026-10-01T09:00:00Z", "rule_version": "R-1", "lower": 10, "upper": 20, "wait_minutes": 45, "unit": "mg/L"}
+{"type": "tick", "at": "2026-10-01T09:45:00Z"}
+{"event_id": "E-1", "source": "LAB-1", "batch_id": "B-001", "sample_id": "S-001", "indicator": "Q-1", "revision": 1, "event_at": "2026-10-01T09:30:00Z", "unit": "mg/L", "type": "result", "received_at": "2026-10-01T09:50:00Z", "value": 15}
+{"type": "read_report", "at": "2026-10-01T09:51:00Z", "role": "site_supervisor"}
+{"type": "decision", "at": "2026-10-01T09:52:00Z", "decision_id": "D-DENIED", "role": "site_supervisor", "action": "check", "reason": "Синтетическая попытка без права решения", "rule_version": "R-1", "result_revision": 1}
+{"type": "decision", "at": "2026-10-01T09:53:00Z", "decision_id": "D-LATE", "role": "quality_responsible", "action": "check", "reason": "Поздний нормальный результат рассмотрен; факт задержки сохранён", "rule_version": "R-1", "result_revision": 1}

@@ -1,5 +1,5 @@
 {
-  "description": "Синтетические контрольные ожидания принятого ограниченного объёма.",
+  "description": "25 контрольных срезов трёх принятых малых шагов незавершённого NML-01.",
   "required_fields": [
     "batch_id",
     "sample_id",
@@ -233,6 +233,636 @@
           }
         }
       ]
+    },
+    {
+      "id": "C04",
+      "phases": [
+        "C04"
+      ],
+      "checkpoints": [
+        {
+          "after_step": 1,
+          "expected": {
+            "permission": "not_issued",
+            "quality": "unknown",
+            "overdue": true,
+            "review": "open",
+            "delay_episodes": 1
+          }
+        },
+        {
+          "after_step": 2,
+          "expected": {
+            "permission": "not_issued",
+            "quality": "conforming",
+            "data_status": "late_received",
+            "overdue": false,
+            "delay_episodes": 1,
+            "review": "open",
+            "waiting_closed_at": "2026-10-01T09:50:00Z",
+            "event_at": "2026-10-01T09:30:00Z",
+            "received_at": "2026-10-01T09:50:00Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "C04-FLOW",
+      "phases": [
+        "C04-FLOW-start",
+        "C04-FLOW-resume"
+      ],
+      "checkpoints": [
+        {
+          "after_step": 3,
+          "expected": {
+            "quality": "conforming",
+            "data_status": "late_received",
+            "overdue": false,
+            "delay_episodes": 1,
+            "logical_exceptions": 1,
+            "review": "open",
+            "waiting_closed_at": "2026-10-01T09:50:00Z",
+            "first_received_at": "2026-10-01T09:50:00Z",
+            "received_at": "2026-10-01T09:50:00Z",
+            "event_at": "2026-10-01T09:30:00Z",
+            "logical_results": 1,
+            "deliveries": 1,
+            "accepted_decisions": 0,
+            "next_action": "quality_responsible_review",
+            "report_read_allowed": true,
+            "permission": "not_issued"
+          }
+        },
+        {
+          "after_step": 4,
+          "expected": {
+            "quality": "conforming",
+            "data_status": "late_received",
+            "overdue": false,
+            "delay_episodes": 1,
+            "logical_exceptions": 1,
+            "review": "open",
+            "waiting_closed_at": "2026-10-01T09:50:00Z",
+            "first_received_at": "2026-10-01T09:50:00Z",
+            "received_at": "2026-10-01T09:50:00Z",
+            "event_at": "2026-10-01T09:30:00Z",
+            "logical_results": 1,
+            "deliveries": 1,
+            "accepted_decisions": 0,
+            "next_action": "quality_responsible_review",
+            "rejected_decisions": 1,
+            "decision_rejection_reason": "role_not_authorized",
+            "rejected_decision_id": "D-DENIED",
+            "last_decision_accepted": false,
+            "permission": "not_issued"
+          }
+        },
+        {
+          "after_step": 5,
+          "expected": {
+            "quality": "conforming",
+            "data_status": "late_received",
+            "overdue": false,
+            "delay_episodes": 1,
+            "logical_exceptions": 1,
+            "review": "checked",
+            "waiting_closed_at": "2026-10-01T09:50:00Z",
+            "first_received_at": "2026-10-01T09:50:00Z",
+            "received_at": "2026-10-01T09:50:00Z",
+            "event_at": "2026-10-01T09:30:00Z",
+            "logical_results": 1,
+            "deliveries": 1,
+            "accepted_decisions": 1,
+            "next_action": "none",
+            "decision_id": "D-LATE",
+            "decision_basis_revision": 1,
+            "decision_role": "quality_responsible",
+            "decision_action": "check",
+            "decision_reason": "Поздний нормальный результат рассмотрен; факт задержки сохранён",
+            "decision_at": "2026-10-01T09:53:00Z",
+            "decision_rule_version": "R-1",
+            "rejected_decisions": 1,
+            "last_decision_accepted": true,
+            "permission": "not_issued"
+          }
+        },
+        {
+          "after_step": 6,
+          "expected": {
+            "quality": "conforming",
+            "data_status": "late_received",
+            "overdue": false,
+            "delay_episodes": 1,
+            "logical_exceptions": 1,
+            "review": "checked",
+            "waiting_closed_at": "2026-10-01T09:50:00Z",
+            "first_received_at": "2026-10-01T09:50:00Z",
+            "received_at": "2026-10-01T09:50:00Z",
+            "event_at": "2026-10-01T09:30:00Z",
+            "logical_results": 1,
+            "deliveries": 1,
+            "accepted_decisions": 1,
+            "next_action": "none",
+            "decision_id": "D-LATE",
+            "decision_basis_revision": 1,
+            "decision_role": "quality_responsible",
+            "decision_action": "check",
+            "decision_reason": "Поздний нормальный результат рассмотрен; факт задержки сохранён",
+            "decision_at": "2026-10-01T09:53:00Z",
+            "decision_rule_version": "R-1",
+            "rejected_decisions": 1,
+            "permission": "not_issued"
+          },
+          "same_as_step": 5
+        },
+        {
+          "after_step": 7,
+          "expected": {
+            "quality": "conforming",
+            "data_status": "late_received",
+            "overdue": false,
+            "delay_episodes": 1,
+            "logical_exceptions": 1,
+            "review": "checked",
+            "waiting_closed_at": "2026-10-01T09:50:00Z",
+            "first_received_at": "2026-10-01T09:50:00Z",
+            "received_at": "2026-10-01T09:50:00Z",
+            "event_at": "2026-10-01T09:30:00Z",
+            "logical_results": 1,
+            "deliveries": 2,
+            "accepted_decisions": 1,
+            "next_action": "none",
+            "decision_id": "D-LATE",
+            "decision_basis_revision": 1,
+            "decision_role": "quality_responsible",
+            "decision_action": "check",
+            "decision_reason": "Поздний нормальный результат рассмотрен; факт задержки сохранён",
+            "decision_at": "2026-10-01T09:53:00Z",
+            "decision_rule_version": "R-1",
+            "rejected_decisions": 1,
+            "permission": "not_issued"
+          }
+        }
+      ]
+    },
+    {
+      "id": "C04-DIRECT",
+      "phases": [
+        "C04-DIRECT"
+      ],
+      "checkpoints": [
+        {
+          "after_step": 1,
+          "expected": {
+            "quality": "conforming",
+            "data_status": "late_received",
+            "overdue": false,
+            "delay_episodes": 1,
+            "logical_exceptions": 1,
+            "review": "open",
+            "waiting_closed_at": "2026-10-01T09:50:00Z",
+            "first_received_at": "2026-10-01T09:50:00Z",
+            "received_at": "2026-10-01T09:50:00Z",
+            "event_at": "2026-10-01T09:30:00Z",
+            "logical_results": 1,
+            "deliveries": 1,
+            "accepted_decisions": 0,
+            "next_action": "quality_responsible_review",
+            "permission": "not_issued"
+          }
+        },
+        {
+          "after_step": 2,
+          "expected": {
+            "quality": "conforming",
+            "data_status": "late_received",
+            "overdue": false,
+            "delay_episodes": 1,
+            "logical_exceptions": 1,
+            "review": "checked",
+            "waiting_closed_at": "2026-10-01T09:50:00Z",
+            "first_received_at": "2026-10-01T09:50:00Z",
+            "received_at": "2026-10-01T09:50:00Z",
+            "event_at": "2026-10-01T09:30:00Z",
+            "logical_results": 1,
+            "deliveries": 1,
+            "accepted_decisions": 1,
+            "next_action": "none",
+            "decision_id": "D-LATE",
+            "decision_basis_revision": 1,
+            "decision_role": "quality_responsible",
+            "decision_action": "check",
+            "decision_reason": "Поздний нормальный результат рассмотрен; факт задержки сохранён",
+            "decision_at": "2026-10-01T09:53:00Z",
+            "decision_rule_version": "R-1",
+            "permission": "not_issued"
+          }
+        }
+      ]
+    },
+    {
+      "id": "C04-TIMELY-REPEAT",
+      "phases": [
+        "C04-TIMELY-REPEAT"
+      ],
+      "checkpoints": [
+        {
+          "after_step": 2,
+          "expected": {
+            "quality": "conforming",
+            "data_status": "received",
+            "delay_episodes": 0,
+            "overdue": false,
+            "logical_exceptions": 0,
+            "review": "not_required",
+            "logical_results": 1,
+            "accepted_decisions": 0,
+            "first_received_at": "2026-10-01T09:20:00Z",
+            "received_at": "2026-10-01T09:20:00Z",
+            "next_action": "none",
+            "deliveries": 1,
+            "permission": "not_issued"
+          },
+          "absent": [
+            "waiting_closed_at"
+          ]
+        },
+        {
+          "after_step": 3,
+          "expected": {
+            "quality": "conforming",
+            "data_status": "received",
+            "delay_episodes": 0,
+            "overdue": false,
+            "logical_exceptions": 0,
+            "review": "not_required",
+            "logical_results": 1,
+            "accepted_decisions": 0,
+            "first_received_at": "2026-10-01T09:20:00Z",
+            "received_at": "2026-10-01T09:20:00Z",
+            "next_action": "none",
+            "deliveries": 2,
+            "permission": "not_issued"
+          },
+          "absent": [
+            "waiting_closed_at"
+          ]
+        }
+      ]
     }
-  ]
+  ],
+  "negative_cases": [
+    {
+      "id": "timely_normal_check",
+      "records": [
+        {
+          "type": "register",
+          "batch_id": "B-001",
+          "sample_id": "S-001",
+          "indicator": "Q-1",
+          "sampled_at": "2026-10-01T09:00:00Z",
+          "registered_at": "2026-10-01T09:00:00Z",
+          "rule_version": "R-1",
+          "lower": 10,
+          "upper": 20,
+          "wait_minutes": 45,
+          "unit": "mg/L"
+        },
+        {
+          "event_id": "E-1",
+          "source": "LAB-1",
+          "batch_id": "B-001",
+          "sample_id": "S-001",
+          "indicator": "Q-1",
+          "revision": 1,
+          "event_at": "2026-10-01T09:15:00Z",
+          "unit": "mg/L",
+          "type": "result",
+          "received_at": "2026-10-01T09:20:00Z",
+          "value": 15
+        },
+        {
+          "type": "decision",
+          "at": "2026-10-01T09:53:00Z",
+          "decision_id": "D-LATE",
+          "role": "quality_responsible",
+          "action": "check",
+          "reason": "Поздний нормальный результат рассмотрен; факт задержки сохранён",
+          "rule_version": "R-1",
+          "result_revision": 1
+        }
+      ],
+      "allowed_reports": 2
+    },
+    {
+      "id": "late_wrong_rule",
+      "records": [
+        {
+          "type": "register",
+          "batch_id": "B-001",
+          "sample_id": "S-001",
+          "indicator": "Q-1",
+          "sampled_at": "2026-10-01T09:00:00Z",
+          "registered_at": "2026-10-01T09:00:00Z",
+          "rule_version": "R-1",
+          "lower": 10,
+          "upper": 20,
+          "wait_minutes": 45,
+          "unit": "mg/L"
+        },
+        {
+          "event_id": "E-1",
+          "source": "LAB-1",
+          "batch_id": "B-001",
+          "sample_id": "S-001",
+          "indicator": "Q-1",
+          "revision": 1,
+          "event_at": "2026-10-01T09:30:00Z",
+          "unit": "mg/L",
+          "type": "result",
+          "received_at": "2026-10-01T09:50:00Z",
+          "value": 15
+        },
+        {
+          "type": "decision",
+          "at": "2026-10-01T09:53:00Z",
+          "decision_id": "D-LATE",
+          "role": "quality_responsible",
+          "action": "check",
+          "reason": "Поздний нормальный результат рассмотрен; факт задержки сохранён",
+          "rule_version": "R-2",
+          "result_revision": 1
+        }
+      ],
+      "allowed_reports": 2
+    },
+    {
+      "id": "late_wrong_revision",
+      "records": [
+        {
+          "type": "register",
+          "batch_id": "B-001",
+          "sample_id": "S-001",
+          "indicator": "Q-1",
+          "sampled_at": "2026-10-01T09:00:00Z",
+          "registered_at": "2026-10-01T09:00:00Z",
+          "rule_version": "R-1",
+          "lower": 10,
+          "upper": 20,
+          "wait_minutes": 45,
+          "unit": "mg/L"
+        },
+        {
+          "event_id": "E-1",
+          "source": "LAB-1",
+          "batch_id": "B-001",
+          "sample_id": "S-001",
+          "indicator": "Q-1",
+          "revision": 1,
+          "event_at": "2026-10-01T09:30:00Z",
+          "unit": "mg/L",
+          "type": "result",
+          "received_at": "2026-10-01T09:50:00Z",
+          "value": 15
+        },
+        {
+          "type": "decision",
+          "at": "2026-10-01T09:53:00Z",
+          "decision_id": "D-LATE",
+          "role": "quality_responsible",
+          "action": "check",
+          "reason": "Поздний нормальный результат рассмотрен; факт задержки сохранён",
+          "rule_version": "R-1",
+          "result_revision": 2
+        }
+      ],
+      "allowed_reports": 2
+    },
+    {
+      "id": "late_empty_reason",
+      "records": [
+        {
+          "type": "register",
+          "batch_id": "B-001",
+          "sample_id": "S-001",
+          "indicator": "Q-1",
+          "sampled_at": "2026-10-01T09:00:00Z",
+          "registered_at": "2026-10-01T09:00:00Z",
+          "rule_version": "R-1",
+          "lower": 10,
+          "upper": 20,
+          "wait_minutes": 45,
+          "unit": "mg/L"
+        },
+        {
+          "event_id": "E-1",
+          "source": "LAB-1",
+          "batch_id": "B-001",
+          "sample_id": "S-001",
+          "indicator": "Q-1",
+          "revision": 1,
+          "event_at": "2026-10-01T09:30:00Z",
+          "unit": "mg/L",
+          "type": "result",
+          "received_at": "2026-10-01T09:50:00Z",
+          "value": 15
+        },
+        {
+          "type": "decision",
+          "at": "2026-10-01T09:53:00Z",
+          "decision_id": "D-LATE",
+          "role": "quality_responsible",
+          "action": "check",
+          "reason": " ",
+          "rule_version": "R-1",
+          "result_revision": 1
+        }
+      ],
+      "allowed_reports": 2
+    },
+    {
+      "id": "late_backwards_decision",
+      "records": [
+        {
+          "type": "register",
+          "batch_id": "B-001",
+          "sample_id": "S-001",
+          "indicator": "Q-1",
+          "sampled_at": "2026-10-01T09:00:00Z",
+          "registered_at": "2026-10-01T09:00:00Z",
+          "rule_version": "R-1",
+          "lower": 10,
+          "upper": 20,
+          "wait_minutes": 45,
+          "unit": "mg/L"
+        },
+        {
+          "event_id": "E-1",
+          "source": "LAB-1",
+          "batch_id": "B-001",
+          "sample_id": "S-001",
+          "indicator": "Q-1",
+          "revision": 1,
+          "event_at": "2026-10-01T09:30:00Z",
+          "unit": "mg/L",
+          "type": "result",
+          "received_at": "2026-10-01T09:50:00Z",
+          "value": 15
+        },
+        {
+          "type": "decision",
+          "at": "2026-10-01T09:49:00Z",
+          "decision_id": "D-LATE",
+          "role": "quality_responsible",
+          "action": "check",
+          "reason": "Поздний нормальный результат рассмотрен; факт задержки сохранён",
+          "rule_version": "R-1",
+          "result_revision": 1
+        }
+      ],
+      "allowed_reports": 2
+    },
+    {
+      "id": "late_normal_clarification",
+      "records": [
+        {
+          "type": "register",
+          "batch_id": "B-001",
+          "sample_id": "S-001",
+          "indicator": "Q-1",
+          "sampled_at": "2026-10-01T09:00:00Z",
+          "registered_at": "2026-10-01T09:00:00Z",
+          "rule_version": "R-1",
+          "lower": 10,
+          "upper": 20,
+          "wait_minutes": 45,
+          "unit": "mg/L"
+        },
+        {
+          "event_id": "E-1",
+          "source": "LAB-1",
+          "batch_id": "B-001",
+          "sample_id": "S-001",
+          "indicator": "Q-1",
+          "revision": 1,
+          "event_at": "2026-10-01T09:30:00Z",
+          "unit": "mg/L",
+          "type": "result",
+          "received_at": "2026-10-01T09:50:00Z",
+          "value": 15
+        },
+        {
+          "type": "decision",
+          "at": "2026-10-01T09:53:00Z",
+          "decision_id": "D-LATE",
+          "role": "quality_responsible",
+          "action": "request_clarification",
+          "reason": "Поздний нормальный результат рассмотрен; факт задержки сохранён",
+          "rule_version": "R-1",
+          "result_revision": 1
+        }
+      ],
+      "allowed_reports": 2
+    },
+    {
+      "id": "late_normal_escalation",
+      "records": [
+        {
+          "type": "register",
+          "batch_id": "B-001",
+          "sample_id": "S-001",
+          "indicator": "Q-1",
+          "sampled_at": "2026-10-01T09:00:00Z",
+          "registered_at": "2026-10-01T09:00:00Z",
+          "rule_version": "R-1",
+          "lower": 10,
+          "upper": 20,
+          "wait_minutes": 45,
+          "unit": "mg/L"
+        },
+        {
+          "event_id": "E-1",
+          "source": "LAB-1",
+          "batch_id": "B-001",
+          "sample_id": "S-001",
+          "indicator": "Q-1",
+          "revision": 1,
+          "event_at": "2026-10-01T09:30:00Z",
+          "unit": "mg/L",
+          "type": "result",
+          "received_at": "2026-10-01T09:50:00Z",
+          "value": 15
+        },
+        {
+          "type": "decision",
+          "at": "2026-10-01T09:53:00Z",
+          "decision_id": "D-LATE",
+          "role": "quality_responsible",
+          "action": "escalate",
+          "reason": "Поздний нормальный результат рассмотрен; факт задержки сохранён",
+          "rule_version": "R-1",
+          "result_revision": 1,
+          "recipient": "authorized_person"
+        }
+      ],
+      "allowed_reports": 2
+    },
+    {
+      "id": "late_conflicting_duplicate",
+      "records": [
+        {
+          "type": "register",
+          "batch_id": "B-001",
+          "sample_id": "S-001",
+          "indicator": "Q-1",
+          "sampled_at": "2026-10-01T09:00:00Z",
+          "registered_at": "2026-10-01T09:00:00Z",
+          "rule_version": "R-1",
+          "lower": 10,
+          "upper": 20,
+          "wait_minutes": 45,
+          "unit": "mg/L"
+        },
+        {
+          "event_id": "E-1",
+          "source": "LAB-1",
+          "batch_id": "B-001",
+          "sample_id": "S-001",
+          "indicator": "Q-1",
+          "revision": 1,
+          "event_at": "2026-10-01T09:30:00Z",
+          "unit": "mg/L",
+          "type": "result",
+          "received_at": "2026-10-01T09:50:00Z",
+          "value": 15
+        },
+        {
+          "type": "decision",
+          "at": "2026-10-01T09:53:00Z",
+          "decision_id": "D-LATE",
+          "role": "quality_responsible",
+          "action": "check",
+          "reason": "Поздний нормальный результат рассмотрен; факт задержки сохранён",
+          "rule_version": "R-1",
+          "result_revision": 1
+        },
+        {
+          "event_id": "E-1",
+          "source": "LAB-1",
+          "batch_id": "B-001",
+          "sample_id": "S-001",
+          "indicator": "Q-1",
+          "revision": 1,
+          "event_at": "2026-10-01T09:30:00Z",
+          "unit": "mg/L",
+          "type": "result",
+          "received_at": "2026-10-01T09:55:00Z",
+          "value": 21
+        }
+      ],
+      "allowed_reports": 3
+    }
+  ],
+  "version": "0.3.0-internal.1"
 }

@@ -1,0 +1,4 @@
+{"type": "register", "batch_id": "B-001", "sample_id": "S-001", "indicator": "Q-1", "sampled_at": "2026-10-01T09:00:00Z", "registered_at": "2026-10-01T09:00:00Z", "rule_version": "R-1", "lower": 10, "upper": 20, "wait_minutes": 45, "unit": "mg/L"}
+{"event_id": "E-1", "source": "LAB-1", "batch_id": "B-001", "sample_id": "S-001", "indicator": "Q-1", "revision": 1, "event_at": "2026-10-01T09:15:00Z", "unit": "mg/L", "type": "result", "received_at": "2026-10-01T09:20:00Z", "value": 15}
+{"type": "tick", "at": "2026-10-01T09:46:00Z"}
+{"event_id": "E-1", "source": "LAB-1", "batch_id": "B-001", "sample_id": "S-001", "indicator": "Q-1", "revision": 1, "event_at": "2026-10-01T09:15:00Z", "unit": "mg/L", "type": "result", "received_at": "2026-10-01T09:50:00Z", "value": 15}
